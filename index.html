@@ -2,12 +2,8 @@
 
 <script type="text/javascript" src="./src/nik_parse.min.js"></script>
 <script>
- var up = document.getElementById('GFG_UP'); 
-            var url = new URL("https://heirro.github.io/nikparse/"); 
-            up.innerHTML = url; 
-            var down = document.getElementById('demo'); 
-                url.searchParams.append('nikId'); 
-                down.innerHTML = url;
+let url = new URL('https://heirro.github.io/nikparse/');
+url.searchParams.set('nikId', 'test me!');
 const nik = "+url+";
 	// parse
 const result = nikParse(nik);
