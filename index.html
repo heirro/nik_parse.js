@@ -1,0 +1,14 @@
+<pre id="demo"></pre>
+
+<script type="text/javascript" src="http://bachors.com/assets/js/nik_parse.min.js"></script>
+<script>
+
+	const nik = "3204110609970004";
+	
+	// parse
+	const result = nikParse(nik);
+	
+	// object
+	document.getElementById("demo").innerHTML = JSON.stringify(result, null, 2);
+	
+</script>
