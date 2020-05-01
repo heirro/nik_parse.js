@@ -2,42 +2,13 @@
 
 <script type="text/javascript" src="./src/nik_parse.min.js"></script>
 <script>
-
-// get url parameters
- url = location.search; // e.g. ?num1=43&num2=23
- var parts = url.substring(1).split('&');
- para_str = parts[0];
-
-// looping through all arguments and store in Object
-for(var i=0;i<parts.length;i++){
- var split_val = parts[i].split('=');
- 
- // Check argument is available or not e.g. ?num1=43&
- if(split_val[0] == undefined || split_val[0] == '' )
-  continue;
- var value = split_val[1];
- // Check value is available or not e.g. ?num1=43&num2= or ?num1=43&num2
- if(value == undefined){
-  value = ""; // Assign space if value is not defined
- }
- parameter_obj[split_val[0]] = value; 
-}
-
-var split_url = url.split('?');
-para_str = split_url[1];
-if(para_str != undefined){
- var parts = para_str.split('&');
-}
-
-if(value == undefined){
- value = "Not found NIK"; // Assign space if value is not defined
-}
-
- $( document ).ready(function() {
-const nik = readUrl();
-       
-    });
-	
+ var up = document.getElementById('GFG_UP'); 
+            var url = new URL("https://heirro.github.io/nikparse/"); 
+            up.innerHTML = url; 
+            var down = document.getElementById('demo'); 
+                url.searchParams.append('nikId'); 
+                down.innerHTML = url;
+const nik = "+url+";
 	// parse
 const result = nikParse(nik);
 	
