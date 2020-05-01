@@ -2,14 +2,13 @@
 
 <script type="text/javascript" src="./src/nik_parse.min.js"></script>
 <script>
-const nikId = urlParams.get('nikId')
-console.log(nikId);
-	const nik =+nikId+;
+const nikId = urlParams.get('nikId');
+const nik = "+nikId+";
 	
 	// parse
-	const result = nikParse(nik);
+const result = nikParse(nik);
 	
 	// object
-	document.getElementById("demo").innerHTML = JSON.stringify(result, null, 2);
+document.getElementById("demo").innerHTML = JSON.stringify(result, null, 2);
 	
 </script>
